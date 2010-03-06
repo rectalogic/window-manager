@@ -1,0 +1,27 @@
+h1. Window Manager
+
+This is a simple window layout manager for MacOS written in Ruby using ruby/cocoa
+and SystemEvents.
+
+When disconnecting and reconnecting an external monitor, MacOS often throws windows onto
+the wrong screen. This script can be used to put a handful of windows back where you want them.
+
+To start, generate a layout file:
+
+@window_manager.rb -dump > my-layout.yaml@
+
+This will layout all windows as they are currently displayed.
+You should edit this down to include only the applications you really want to layout.
+You can also remove the :size settings if you only want to position windows.
+The window titles are Regexps, so you can modify them for windows whose
+title changes often.
+
+See layout.yaml for an example stripped down layout.
+
+Once you have a layout built, you can use it to relayout those windows:
+
+@window_manager.rb my-layout.yaml@
+
+If you use QuickSilver, you can setup a _Custom Trigger_ to run the script with your layout
+file when you hit a hotkey.
+
