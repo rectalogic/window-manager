@@ -57,7 +57,7 @@ class WindowManager
         window = windows.find {|w| w.name.to_s =~ title }
         Window.new(window) if window
       else
-        Window.new(windows.first)
+        Window.new(windows.first) unless windows.empty?
       end
     end
   end
@@ -93,8 +93,10 @@ class WindowManager
       if process
         setting.each_pair do |title,ws|
           window = process.find_window(title)
-          window.position = ws[:position] if ws[:position]
-          window.size = ws[:size] if ws[:size]
+          if window
+            window.position = ws[:position] if ws[:position]
+            window.size = ws[:size] if ws[:size]
+          end
         end
       end
     end
