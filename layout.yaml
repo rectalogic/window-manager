@@ -34,4 +34,4 @@
     :position: [-1141, 198]
   ? !ruby/regexp /^Inspector$/
   :
-    :position: [-820 198]
+    :position: [-820, 198]
