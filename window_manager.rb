@@ -125,7 +125,7 @@ def parse_opts(argv)
   options.dumplayout = nil
 
   opts = OptionParser.new do |opts|
-    opts.banner = "Usage: #{$0} [options] <layout.yaml>"
+    opts.banner = "Usage: #{$0} [options] [<layout.yaml>]"
     opts.separator ""
     opts.separator "Input file is a yaml layout specification."
     opts.separator "Specific options:"
@@ -140,7 +140,7 @@ def parse_opts(argv)
     end
   end
   opts.parse!(argv)
-  options.layout = argv.first
+  options.layout = argv.first || File.expand_path('../layout.yaml', __FILE__)
   if not options.dumplayout and not options.layout
     $stderr.puts(opts)
     exit(1)
