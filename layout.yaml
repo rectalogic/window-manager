@@ -4,34 +4,29 @@
     :position: [-587, 8]
 
 # Position Adium Contacts and chat window.
-# The chat window has 3 tabs so any of these 3 titles need to match.
+# The chat window has 4 tabs so any of these 4 titles need to match.
 - :process: com.adiumX.adiumX
-  ? !ruby/regexp /area42|kewlkids|Yammer/
+  ? !ruby/regexp /cureatr|motionbox|Twitter/
   :
-    :position: [-727, 447]
+    :position: [-750, 393]
+    :size: [750, 509]
+
   ? !ruby/regexp /Contacts/
   :
     :position: [-213, 0]
 
-- :process: com.apple.calculator
+- :process: com.acqualia.soulver
   ~:
     :position: [-602, 72]
 
 # Position one of our Chrome windows, it has 3 tabs so any of these titles need to match.
 - :process: com.google.Chrome
-  ? !ruby/regexp /Gmail$|^Google Calendar$|^Tasks$/
+  ? !ruby/regexp /Gmail$|Cureatr Mail$|Calendar$|^Tasks$/
   :
-    :position: [-1426, 7]
+    :position: [-1425, 10]
 
 - :process: com.apple.finder
   ~:
     :position: [1020, 661]
     :size: [866, 477]
 
-- :process: com.apple.QuartzComposer.editor
-  ? !ruby/regexp /^Library$/
-  :
-    :position: [-1141, 198]
-  ? !ruby/regexp /^Inspector$/
-  :
-    :position: [-820, 198]
