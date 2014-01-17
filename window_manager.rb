@@ -1,4 +1,5 @@
-#!/usr/bin/ruby
+#!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby
+# Mavericks requires ruby 1.8 for the ScriptingBridge
 
 require 'yaml'
 require 'optparse'
